@@ -39,7 +39,7 @@ public class UserThread extends Thread {
  
             do {
                 clientMessage = reader.readLine();
-                serverMessage = "[" + userName + "]: " + clientMessage;
+                serverMessage = clientMessage;
                 server.broadcast(serverMessage, this);
  
             } while (!clientMessage.equals("bye"));
